@@ -1,38 +1,53 @@
-package hashmaps;
-
-import java.util.HashMap;
-
 public class Ex1
 {
+    public static class Add
+    {
+        double percentage;
+        public int addition(int a,int b)
+        {
+            int sum=a+b;
+            return sum;
+        }
+        public String voteeligibility(int age)
+        {
+            if (age < 18) {
+                return "you are under age";
+            } else {
+                return " you are eligibile";
+            }
+        }
+        public boolean validateresult() {
+            if (percentage>33)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public void multi(int a,int b)
+        {
+            int multi= a*b;
+            System.out.print("multi is "+ multi);
+        }
+    }
     public static void main(String[] args)
     {
-        HashMap<String,Integer> marks=new HashMap<String, Integer>();
-        marks.put("vijay",435);
-        marks.put("dhruv",234);
-        marks.put("aakash",345);
-        marks.put("rahul",435);
-        System.out.println(marks.get("aakash"));
-        marks.remove("vijay");
-      //  marks.remove(234);
-        for(String s: marks.keySet()){
-            System.out.println(s);
+        Add aone=new Add();
+        aone.percentage=34.0;
+        boolean res=aone.validateresult();
+        if(res){
+            System.out.println("student pass");
         }
-
-        System.out.println();
-
-//        for(String s: marks.keySet()){
-//            System.out.println(s);
-//        }
-
-
-        for(int i: marks.values()){
-            System.out.println(i);
+        else
+        {
+            System.out.println(" student fail");
         }
-
-        for(String s: marks.keySet()){
-           //System.out.println();
-            System.out.println(" "+ s+" =>"+ marks.get(s));
-
-        }
+        int res2= aone.addition(3,5);
+        System.out.println(" sum is"+ res2);
+        String res3= aone.voteeligibility(19);
+        System.out.println(res3);
+        aone.multi(3,5);
     }
 }

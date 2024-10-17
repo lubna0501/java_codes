@@ -1,10 +1,6 @@
-package abstraction;
+package Interfaces;
 
-public class divide extends General {
-    public void general(int a,int b)
-    {
-        int divide=a/b;
-        System.out.println(divide);
-
-    }
+public interface divide
+{
+    public int divide(int a,int b);
 }

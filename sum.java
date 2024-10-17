@@ -1,13 +1,8 @@
-package abstraction;
+package Interfaces;
 
-public class sum extends General
+public interface sum
 {
-    public void general(int a,int b)
-        {
-            int sum=a+b;
-            System.out.println(sum);
+    public int add(int a,int b);
 
-        }
-
-
+    int sum(int a, int b);
 }

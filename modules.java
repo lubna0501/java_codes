@@ -1,10 +1,6 @@
-package abstraction;
+package Interfaces;
 
-public class modules extends General {
-    public void general(int a,int b)
-    {
-        int mod=a%b;
-        System.out.println(mod);
-
-    }
+public interface modules
+{
+    public int modules(int a,int b);
 }

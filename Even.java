@@ -1,35 +1,18 @@
-package excep;
-
-import java.util.Scanner;
+package Simple;
 
 public class Even
 {
-        void number(int a) throws supers
+    public static void main(String[] args)
+    {
+        int a= 21;
+        int b= a%2;
+        if (b==0)
         {
-            if(a%2==0)
-            {
-                throw  new supers (" no is even");
-            }
+            System.out.println("no is even ");
         }
-        public static void main(String[] args)
+        else if (b!=0)
         {
-            int a;
-            excep.Even e1=new excep.Even();
-            Scanner sc=new Scanner(System.in);
-            System.out.println(" enter no");
-            a=sc.nextInt();
-            try{
-                e1.number(a);
-                System.out.println("odd no ");
-                System.out.println(" no is even");
-            }
-            catch( supers e){
-                e.printStackTrace();
-            }
+            System.out.println("no is odd ");
         }
     }
-
-
-
-
-
+}

@@ -1,32 +1,21 @@
-package abstraction;
-
-public class Third extends Ex1
+package threds;
+public class Third  implements Runnable
 {
 
-
-    public static void main(String[] args) {
-        Second s1=new Second();
-        s1.reverse(123);
-        s1.Sum(1,2);
-        Third s2=new Third();
-        s2.reverse(123);
-        s2.multi(1,2);
-    }
-
     @Override
-    public void reverse(int no) {
+    public void run() {
+        for(int i=10;i>=1;i++){
 
-            int multi=1;
-            while(no!=0)
+            try
             {
-                int r=no%10;
-                multi=multi*r;
-                no=no/10;
-
+                Thread.sleep(1000);
             }
-            System.out.println(multi);
+            catch (InterruptedException e)
+            {
+                e.printStackTrace();
+            }
+            System.out.println(" ex"+i);
 
-
-
+        }
     }
 }

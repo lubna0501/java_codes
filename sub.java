@@ -1,10 +1,6 @@
-package abstraction;
+package Interfaces;
 
-public class sub extends General {
-    public void general(int a,int b)
-    {
-        int sub=a-b;
-        System.out.println(sub);
-
-    }
+public interface sub
+{
+    public int sub(int a,int b);
 }
